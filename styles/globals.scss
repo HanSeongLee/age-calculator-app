@@ -1,5 +1,19 @@
 @import "styles/utils";
 
+:root {
+  // Colors
+  // Primary Colors
+  --primary-color-purple: hsl(259, 100%, 65%);
+  --primary-color-red: hsl(0, 100%, 67%);
+
+  // Neutral Colors
+  --neutral-color-white: hsl(0, 0%, 100%);
+  --neutral-color-offwhite: hsl(0, 0%, 94%);
+  --neutral-color-lightgrey: hsl(0, 0%, 86%);
+  --neutral-color-smokeygrey: hsl(0, 1%, 44%);
+  --neutral-color-offblack: hsl(0, 0%, 8%);
+}
+
 html,
 body {
   padding: 0;
@@ -7,6 +21,8 @@ body {
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.01em;
+  color: var(--neutral-color-offblack);
+  background: var(--neutral-color-offwhite);
 
   @include media(">desktop") {
     font-size: 32px;
