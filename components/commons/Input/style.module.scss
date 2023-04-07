@@ -46,6 +46,10 @@
     padding: 12px 16px;
     caret-color: var(--primary-color-purple);
 
+    &::placeholder {
+      color: var(--neutral-color-offblack-alpha50);
+    }
+
     @include media(">desktop") {
       height: 72px;
       font-size: 32px;
