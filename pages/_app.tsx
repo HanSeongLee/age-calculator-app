@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
         <style jsx global>{`
-          html {
+          *, html {
             font-family: ${poppins.style.fontFamily};
           }
         `}</style>
