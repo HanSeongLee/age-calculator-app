@@ -111,21 +111,21 @@ const AgeCalculatorForm: React.FC<IProps> = ({ control, result, className, ...pr
                         <CountUp end={result.years}
                                  duration={2}
                         />
-                    ) : '--'}</strong> years
+                    ) : '- -'}</strong> years
                 </div>
                 <div>
                     <strong>{result ? (
                         <CountUp end={result.months}
                                  duration={2}
                         />
-                    ) : '--'}</strong> months
+                    ) : '- -'}</strong> months
                 </div>
                 <div>
                     <strong>{result ? (
                         <CountUp end={result.days}
                                  duration={2}
                         />
-                    ) : '--'}</strong> days
+                    ) : '- -'}</strong> days
                 </div>
             </div>
         </form>

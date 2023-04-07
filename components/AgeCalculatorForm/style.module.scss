@@ -11,6 +11,7 @@
   @include media(">desktop") {
     padding: 56px;
     gap: 0;
+    border-radius: 24px 24px 200px 24px;
   }
 
   .fieldContainer {
