@@ -6,6 +6,7 @@ import ArrowIcon from '/public/icons/icon-arrow.svg';
 import { Control } from 'react-hook-form';
 import { ERROR_MESSAGES } from 'types/message';
 import { isValid, parseISO } from 'date-fns';
+import CountUp from 'react-countup';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     control: Control<any>;
@@ -101,15 +102,29 @@ const AgeCalculatorForm: React.FC<IProps> = ({ control, result, className, ...pr
                 </button>
             </div>
 
-            <div className={styles.result}>
+            <div className={styles.result}
+                 key={result && `${result.years}-${result.months}-${result.days}`}
+            >
                 <div>
-                    <strong>{result ? result.years : '--'}</strong> years
+                    <strong>{result ? (
+                        <CountUp end={result.years}
+                                 duration={2}
+                        />
+                    ) : '--'}</strong> years
                 </div>
                 <div>
-                    <strong>{result ? result.months : '--'}</strong> months
+                    <strong>{result ? (
+                        <CountUp end={result.months}
+                                 duration={2}
+                        />
+                    ) : '--'}</strong> months
                 </div>
                 <div>
-                    <strong>{result ? result.days : '--'}</strong> days
+                    <strong>{result ? (
+                        <CountUp end={result.days}
+                                 duration={2}
+                        />
+                    ) : '--'}</strong> days
                 </div>
             </div>
         </form>
