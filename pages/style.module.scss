@@ -1,0 +1,16 @@
+@import "styles/utils";
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+}
+
+.main {
+  min-height: 812px;
+  padding-top: 88px;
+
+  @include media(">desktop") {
+    min-height: 960px;
+    padding-top: 171px;
+  }
+}
