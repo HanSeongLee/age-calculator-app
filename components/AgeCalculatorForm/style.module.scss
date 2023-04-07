@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .ageCalculatorForm {
   display: flex;
@@ -7,9 +8,19 @@
   border-radius: 24px 24px 100px 24px;
   padding: 48px 24px;
 
+  @include media(">desktop") {
+    padding: 56px;
+    gap: 0;
+  }
+
   .fieldContainer {
+    max-width: 544px;
     display: flex;
     gap: 16px;
+
+    @include media(">desktop") {
+      gap: 32px;
+    }
   }
 
   .buttonContainer {
@@ -24,6 +35,12 @@
       background: var(--neutral-color-lightgrey);
       content: "";
     }
+
+    &::after {
+      @include media(">desktop") {
+        display: none;
+      }
+    }
   }
 
   .button {
@@ -37,9 +54,24 @@
     border: none;
     cursor: pointer;
 
+    @include media(">desktop") {
+      width: 96px;
+      height: 96px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: var(--neutral-color-offblack);
+      }
+    }
+
     svg {
       width: 24px;
       height: 24px;
+
+      @include media(">desktop") {
+        width: 44px;
+        height: 44px;
+      }
     }
   }
 
@@ -49,6 +81,10 @@
     font-size: 56px;
     line-height: 110%;
     letter-spacing: -0.02em;
+
+    @include media(">desktop") {
+      font-size: 104px;
+    }
 
     strong {
       color: var(--primary-color-purple);
