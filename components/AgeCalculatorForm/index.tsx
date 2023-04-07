@@ -97,6 +97,7 @@ const AgeCalculatorForm: React.FC<IProps> = ({ control, result, className, ...pr
             <div className={styles.buttonContainer}>
                 <button className={styles.button}
                         type={'submit'}
+                        title={'Calculate'}
                 >
                     <ArrowIcon />
                 </button>
